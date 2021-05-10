@@ -7,7 +7,7 @@ let package = Package(
     products: [
         .library(
             name: "Analytics",
-            targets: ["Analytics"]),
+            targets: [ "Analytics" ]),
     ],
     dependencies: [
         .package(url: "https://github.com/Quick/Nimble.git", .upToNextMajor(from: "9.0.1")),
@@ -19,6 +19,6 @@ let package = Package(
             dependencies: []),
         .testTarget(
             name: "AnalyticsTests",
-            dependencies: ["Analytics"]),
+            dependencies: [ "Analytics", "Nimble", "Quick" ]),
     ]
 )

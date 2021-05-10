@@ -1,15 +1,29 @@
+import Nimble
+import Quick
 import XCTest
 @testable import Analytics
 
-final class AnalyticsTests: XCTestCase {
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        XCTAssertEqual(Analytics().text, "Hello, World!")
+final class AnalyticsTests: QuickSpec {
+    override func spec() {
+        describe("Analytics") {
+            context("") {
+                it("") {
+                    Analytics()
+                        .set(v: .v1)
+                        .set(tid: "UA-XXXX-Y")
+                        .set(t: "event")
+                        .debug(with: .get)
+                        .request() { (_, _, error) in
+                            if let error = error {
+                                print(error.localizedDescription)
+                            }
+                        }
+                }
+            }
+        }
     }
 
     static var allTests = [
-        ("testExample", testExample),
+        ("spec", spec),
     ]
 }
