@@ -3,5 +3,7 @@
 /Packages
 /*.xcodeproj
 xcuserdata/
-.swiftpm/
+./.swiftpm/
+./.swiftpm/xcode
+*.xcworkspace
 Package.resolved
