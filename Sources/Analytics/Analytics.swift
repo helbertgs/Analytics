@@ -359,4 +359,43 @@ final class Analytics {
         params["linkid"] = value
         return self
     }
+
+    // MARK: - Apps
+
+
+    /// Specifies the application name. This field is required for any hit that has app related data (i.e., app version, app ID, or app installer ID). For hits sent to web properties, this field is optional. (Optional)
+    /// Example value: My App
+    /// - parameters: Application Name.
+    @discardableResult
+    public func set(an value: String) -> Self {
+        params["an"] = value
+        return self
+    }
+
+    /// Application identifier (Optional)
+    /// Example value: com.company.app
+    /// - parameters: Bundle identifier.
+    @discardableResult
+    public func set(aid value: String) -> Self {
+        params["aid"] = value
+        return self
+    }
+
+    /// Specifies the application version. (Optional)
+    /// Example value: 0.1.0
+    /// - parameters: Appllication Version.
+    @discardableResult
+    public func set(av value: String) -> Self {
+        params["av"] = value
+        return self
+    }
+
+    /// Application installer identifier. (Optional)
+    /// Example value: com.platform.vending
+    /// - parameters: Application installer Id
+    @discardableResult
+    public func set(aiid value: String) -> Self {
+        params["aiid"] = value
+        return self
+    }
 }
