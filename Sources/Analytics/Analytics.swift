@@ -305,4 +305,58 @@ final class Analytics {
         params["dl"] = value
         return self
     }
+
+    /// Specifies the hostname from which content was hosted. (Optional)
+    /// Expected value: foo.com
+    /// - parameters: Document Host Name
+    @discardableResult
+    public func set(dh value: String) -> Self {
+        params["dh"] = value
+        return self
+    }
+
+    /// The path portion of the page URL. Should begin with '/'. For 'pageview' hits, either &dl or both &dh and &dp have to be specified for the hit to be valid. (Optional)
+    /// Expected value: /foo
+    /// - parameters: Document Path
+    @discardableResult
+    public func set(dp value: String) -> Self {
+        params["dp"] = value
+        return self
+    }
+
+    /// The title of the page / document. (Optional)
+    /// Expected value: Settings
+    /// - parameters: Document Title
+    @discardableResult
+    public func set(dt value: String) -> Self {
+        params["dt"] = value
+        return self
+    }
+
+    /// This parameter is optional on web properties, and required on mobile properties for screenview hits, where it is used for the 'Screen Name' of the screenview hit. On web properties this will default to the unique URL of the page by either using the &dl parameter as-is or assembling it from &dh and &dp. (Required).
+    /// Expected value: High Scores
+    /// - parameters: Screen Name.
+    @discardableResult
+    public func set(cd value: String) -> Self {
+        params["cd"] = value
+        return self
+    }
+
+    /// You can have up to 5 content groupings, each of which has an associated index between 1 and 5, inclusive. Each content grouping can have up to 100 content groups. The value of a content group is hierarchical text delimited by '/". All leading and trailing slashes will be removed and any repeated slashes will be reduced to a single slash. For example, '/a//b/' will be converted to 'a/b'. (Optional)
+    /// Expected value: news/sports
+    /// - parameters: Content Group
+    @discardableResult
+    public func set(cg value: String) -> Self {
+        params["cg"] = value
+        return self
+    }
+
+    /// The ID of a clicked DOM element, used to disambiguate multiple links to the same URL in In-Page Analytics reports when Enhanced Link Attribution is enabled for the property. (Optional).
+    /// Expected value: nav_bar
+    /// - parameters: Link ID
+    @discardableResult
+    public func set(linkid value: String) -> Self {
+        params["linkid"] = value
+        return self
+    }
 }
