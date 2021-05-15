@@ -13,15 +13,17 @@ let package = Package(
             targets: [ "Analytics" ]),
     ],
     dependencies: [
-        .package(url: "https://github.com/Quick/Nimble.git", .upToNextMajor(from: "9.0.1")),
-        .package(url: "https://github.com/Quick/Quick.git", .upToNextMajor(from: "3.1.2")),
+       .package(url: "https://github.com/Quick/Nimble.git", .upToNextMajor(from: "9.0.1")),
+       .package(url: "https://github.com/Quick/Quick.git", .upToNextMajor(from: "3.1.2")),
     ],
     targets: [
         .target(
             name: "Analytics",
-            dependencies: []),
+            dependencies: [
+                
+            ]),
         .testTarget(
             name: "AnalyticsTests",
-            dependencies: [ "Analytics", "Nimble", "Quick" ]),
+           dependencies: [ "Analytics", "Nimble", "Quick" ]),
     ]
 )

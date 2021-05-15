@@ -1,4 +1,5 @@
-import Foundation
+#if canImport(UIKit)
+import UIKit
 
 extension Dictionary {
     func percentEncoded() -> Data? {
@@ -22,3 +23,5 @@ extension CharacterSet {
         return allowed
     }()
 }
+
+#endif

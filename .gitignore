@@ -3,7 +3,7 @@
 /Packages
 /*.xcodeproj
 xcuserdata/
-./.swiftpm/
-./.swiftpm/xcode
+/.swiftpm/
 *.xcworkspace
 Package.resolved
+Gemfile.lock

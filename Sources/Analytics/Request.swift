@@ -1,6 +1,7 @@
+#if canImport(UIKit)
 import UIKit
 
-enum Request {
+public enum Request {
 
     // MARK: Alias.
 
@@ -12,6 +13,7 @@ enum Request {
 
     // MARK: - Public Function(s).
 
+    /// Build a GET / POST request
     static func factory(method: Method = .get, params: Params) -> URLRequest {
         switch method {
         case .get: return get(with: params)
@@ -41,3 +43,5 @@ enum Request {
         return request
     }
 }
+
+#endif

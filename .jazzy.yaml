@@ -1,0 +1,17 @@
+output: docs
+clean: true
+framework_root: Analytics
+xcodebuild_arguments:
+  - -workspace
+  - .swiftpm/xcode/package.xcworkspace
+  - -scheme
+  - Analytics
+sdk: iphonesimulator
+author: Helbert Gomes
+author_url: https://github.com/helbertgs
+module: Analytics
+github_url: https://github.com/helbertgs/Analytics
+# skip_undocumented: true
+# hide_documentation_coverage: trueclearc
+swift_build_tool: xcodebuild
+theme: apple
