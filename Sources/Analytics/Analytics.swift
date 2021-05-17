@@ -436,6 +436,75 @@ public final class Analytics {
         params["ev"] = value
         return self
     }
+
+    // MARK: - Social Interactions.
+
+    /// Specifies the social network, for example Facebook or Google Plus. (Required)
+    /// Example Value: facebook.
+    /// - Parameter sn: Social Network.
+    @discardableResult
+    public func set(sn value: String) -> Self {
+        params["sn"] = value
+        return self
+    }
+
+    /// Specifies the social interaction action. For example on Google Plus when a user clicks the +1 button, the social action is 'plus'. (Required)
+    /// Example Value: like.
+    /// - Parameter sa: Social Action.
+    @discardableResult
+    public func set(sa value: String) -> Self {
+        params["sa"] = value
+        return self
+    }
+
+    /// Specifies the target of a social interaction. This value is typically a URL but can be any text. (Required)
+    /// Example value: http://foo.com
+    /// - Parameter st: Social Action Target.
+    @discardableResult
+    public func set(st value: String) -> Self {
+        params["st"] = value
+        return self
+    }
+
+    // MARK: - Exceptions.
+
+    /// Specifies the description of an exception. (Optional)
+    /// Example value: DatabaseError
+    /// - Parameter exd:Exception Description.
+    @discardableResult
+    public func set(exd value: String) -> Self {
+        params["exd"] = value
+        return self
+    }
+
+    /// Specifies whether the exception was fatal. (Optional)
+    /// Example value: true
+    /// - Parameter exf: Is Exception Fatal?
+    @discardableResult
+    public func set(exf value: Bool) -> Self {
+        params["exf"] = value ? 1 : 0
+        return self
+    }
+
+    // MARK: - Custom Dimensions / Metrics.
+
+    /// Each custom dimension has an associated index. There is a maximum of 20 custom dimensions (200 for Analytics 360 accounts). The dimension index must be a positive integer between 1 and 200, inclusive. (Optional)
+    /// - Parameter cd: Custom Dimension Index.
+    /// - Parameter value: Custom Dimension Value.
+    @discardableResult
+    public func set(cd index: Int, value: String) -> Self {
+        params["cd\(index)"] = value
+        return self
+    }
+
+    /// Each custom metric has an associated index. There is a maximum of 20 custom metrics (200 for Analytics 360 accounts). The metric index must be a positive integer between 1 and 200, inclusive.. (Optional)
+    /// - Parameter cm: Custom Metric Index.
+    /// - Parameter value: Custom Metric Value.
+    @discardableResult
+    public func set(cm index: Int, value: Int) -> Self {
+        params["cm\(index)"] = value
+        return self
+    }
 }
 
 #endif
