@@ -9,7 +9,7 @@ public enum Request {
 
     // MARK: - Private Property(ies).
 
-    private static var baseURL: URL { URL(string: "https://wwww.google-analytics.com/connect")! }
+    private static var baseURL: URL { URL(string: "https://www.google-analytics.com/collect")! }
 
     // MARK: - Public Function(s).
 

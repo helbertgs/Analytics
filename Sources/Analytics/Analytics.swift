@@ -8,18 +8,43 @@ public final class Analytics {
 
     // MARK: - Private Property(ies).
 
+    private var measurement: [MeasurementType]
     private var params: [String: Any]
+    private var required: [String] {
+        var keys = Set<String>()
+
+        measurement.forEach { measurements in
+            measurements.required.forEach { key in
+                if !params.keys.contains(key) {
+                    keys.insert(key)
+                }
+            }
+        }
+
+        return Array<String>(keys)
+    }
+
 
     // MARK: - Constructor(s).
 
-    public init() {
-        params = [:]
+    public init(measurement: MeasurementType...) {
+        self.measurement = measurement
+        self.params = [:]
     }
 
     // MARK: - General.
 
-    public func request(method: Method = .get, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) {
-        URLSession.shared.dataTask(with: Request.factory(method: method, params: params), completionHandler: completionHandler)
+    public func request(method: Method = .get, completionHandler: @escaping (Data?, URLResponse?, Swift.Error?) -> Void) {
+        if required.isEmpty {
+            let config = URLSessionConfiguration.default
+            let session = URLSession(configuration: config)
+            let task = session.dataTask(with: Request.factory(method: method, params: params), completionHandler: completionHandler)
+
+            task.resume()
+            return
+        }
+
+        completionHandler(nil, nil, Error.keys(required))
     }
 
     /// Show the parameters.
