@@ -27,7 +27,7 @@ public final class Analytics {
 
     // MARK: - Constructor(s).
 
-    public init(measurement: MeasurementType...) {
+    public init(measurement: [MeasurementType] = [ .general ]) {
         self.measurement = measurement
         self.params = [:]
     }

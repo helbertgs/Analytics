@@ -17,7 +17,7 @@
     <a title="Analytics Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Analytics Docs</a> (0% documented)</p>
+        <p><a href="../index.html">Analytics Docs</a> (50% documented)</p>
         <p class="header-right"><a href="https://github.com/helbertgs/Analytics"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right">
           <form role="search" action="../search.json">
@@ -42,11 +42,20 @@
               <li class="nav-group-task">
                 <a href="../Classes/Analytics.html">Analytics</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Measurement.html">Measurement</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
             <a href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/Error.html">Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MeasurementType.html">MeasurementType</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Enums/Method.html">Method</a>
               </li>
@@ -88,8 +97,8 @@ v4: <a href="https://ga-dev-tools.appspot.com/hit-builder/">https://ga-dev-tools
                   <div>
                     <code>
                     <a name="/"></a>
-                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
-                    <a class="token" href="#/">init()</a>
+                    <a name="//apple_ref/swift/Method/init(measurement:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">init(measurement:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1053,10 +1062,280 @@ Example value: com.platform.vending</p>
                 </li>
               </ul>
             </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Events"></a>
+                <a name="//apple_ref/swift/Section/Events" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Events"></a>
+                  <h3 class="section-name"><p>Events</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/set(ec:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">set(ec:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies the event category. Must not be empty. (Required)
+Example Value: Category.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/set(ea:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">set(ea:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies the event action. Must not be empty. (Required)
+Example Value: Action.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/set(el:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">set(el:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies the event label.
+Example Value: Label.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/set(ev:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">set(ev:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies the event value. Must not be non-negative
+Example Value: 55.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Social%20Interactions."></a>
+                <a name="//apple_ref/swift/Section/Social Interactions." class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Social%20Interactions."></a>
+                  <h3 class="section-name"><p>Social Interactions.</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/set(sn:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">set(sn:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies the social network, for example Facebook or Google Plus. (Required)
+Example Value: facebook.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/set(sa:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">set(sa:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies the social interaction action. For example on Google Plus when a user clicks the +1 button, the social action is &lsquo;plus&rsquo;. (Required)
+Example Value: like.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/set(st:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">set(st:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies the target of a social interaction. This value is typically a URL but can be any text. (Required)
+Example value: <a href="http://foo.com">http://foo.com</a></p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Exceptions."></a>
+                <a name="//apple_ref/swift/Section/Exceptions." class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Exceptions."></a>
+                  <h3 class="section-name"><p>Exceptions.</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/set(exd:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">set(exd:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies the description of an exception. (Optional)
+Example value: DatabaseError</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/set(exf:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">set(exf:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies whether the exception was fatal. (Optional)
+Example value: true</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Custom%20Dimensions%20%2F%20Metrics."></a>
+                <a name="//apple_ref/swift/Section/Custom Dimensions / Metrics." class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Custom%20Dimensions%20%2F%20Metrics."></a>
+                  <h3 class="section-name"><p>Custom Dimensions / Metrics.</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/set(cd:value:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">set(cd:<wbr>value:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Each custom dimension has an associated index. There is a maximum of 20 custom dimensions (200 for Analytics 360 accounts). The dimension index must be a positive integer between 1 and 200, inclusive. (Optional)</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/set(cm:value:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">set(cm:<wbr>value:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Each custom metric has an associated index. There is a maximum of 20 custom metrics (200 for Analytics 360 accounts). The metric index must be a positive integer between 1 and 200, inclusive.. (Optional)</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://github.com/helbertgs" target="_blank" rel="external">Helbert Gomes</a>. All rights reserved. (Last updated: 2021-05-11)</p>
+          <p>&copy; 2021 <a class="link" href="https://github.com/helbertgs" target="_blank" rel="external">Helbert Gomes</a>. All rights reserved. (Last updated: 2021-05-19)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
